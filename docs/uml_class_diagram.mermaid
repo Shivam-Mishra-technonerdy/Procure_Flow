@@ -1,0 +1,74 @@
+classDiagram
+    class User {
+        +Long id
+        +String username
+        +String email
+        +String password
+        +String fullName
+        +Role role
+        +Supplier supplier
+        +LocalDateTime createdAt
+    }
+
+    class Role {
+        <<enumeration>>
+        ROLE_ADMIN
+        ROLE_SUPPLIER
+        ROLE_BUYER
+    }
+
+    class Supplier {
+        +Long id
+        +String name
+        +String companyName
+        +String contactEmail
+        +String phone
+        +String address
+        +String category
+        +Double rating
+        +String status
+    }
+
+    class OrderStatus {
+        <<enumeration>>
+        PENDING
+        APPROVED
+        REJECTED
+        DELIVERED
+        CANCELLED
+    }
+
+    class PurchaseOrder {
+        +Long id
+        +String orderNumber
+        +User buyer
+        +Supplier supplier
+        +OrderStatus status
+        +BigDecimal totalAmount
+        +BigDecimal taxAmount
+        +BigDecimal grandTotal
+        +String deliveryAddress
+        +LocalDate expectedDeliveryDate
+        +LocalDate actualDeliveryDate
+        +String notes
+        +String rejectionReason
+        +List~OrderItem~ items
+        +addItem(OrderItem)
+        +removeItem(OrderItem)
+    }
+
+    class OrderItem {
+        +Long id
+        +PurchaseOrder purchaseOrder
+        +String itemDescription
+        +Integer quantity
+        +BigDecimal unitPrice
+        +BigDecimal subtotal
+    }
+
+    User --> Role
+    User "1" *-- "0..1" Supplier
+    PurchaseOrder --> OrderStatus
+    PurchaseOrder "1" o-- "*" OrderItem : contains
+    PurchaseOrder "1" --> "1" User : buyer
+    PurchaseOrder "1" --> "1" Supplier : supplier

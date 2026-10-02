@@ -1,0 +1,45 @@
+# Logs & Process IDs
+logs/
+*.log
+*.pid
+
+# Maven & Java
+target/
+backend/target/
+*.class
+TestHash*
+backend/TestHash*
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.versionsBackup
+backend/pom.xml.next
+.mvn/
+mvnw
+mvnw.cmd
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+*.env
+*.env.local
+
+# IDE & Editors
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db

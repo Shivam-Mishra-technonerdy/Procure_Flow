@@ -1,0 +1,27 @@
+stateDiagram-v2
+    [*] --> PENDING : Buyer submits Purchase Order
+    
+    state PENDING {
+        [*] --> AwaitingReview
+        AwaitingReview --> EmailDispatchedToAdmin
+    }
+
+    PENDING --> APPROVED : Admin Approves Order
+    PENDING --> REJECTED : Admin Rejects (with Reason)
+    PENDING --> CANCELLED : Buyer Cancels Requisition
+
+    state APPROVED {
+        [*] --> InFulfillment
+        InFulfillment --> SupplierNotified
+    }
+
+    APPROVED --> DELIVERED : Supplier Marks as Delivered
+
+    state DELIVERED {
+        [*] --> FulfillmentComplete
+        FulfillmentComplete --> ReceiptConfirmed
+    }
+
+    REJECTED --> [*]
+    CANCELLED --> [*]
+    DELIVERED --> [*]

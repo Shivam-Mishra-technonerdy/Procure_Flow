@@ -1,0 +1,57 @@
+erDiagram
+    USERS ||--o{ PURCHASE_ORDERS : places
+    USERS }o--|| SUPPLIERS : belongs_to
+    SUPPLIERS ||--o{ PURCHASE_ORDERS : fulfills
+    PURCHASE_ORDERS ||--|{ ORDER_ITEMS : contains
+
+    USERS {
+        bigint id PK
+        varchar username UK
+        varchar email UK
+        varchar password
+        varchar full_name
+        varchar role
+        bigint supplier_id FK
+        datetime created_at
+    }
+
+    SUPPLIERS {
+        bigint id PK
+        varchar name
+        varchar company_name
+        varchar contact_email UK
+        varchar phone
+        varchar address
+        varchar category
+        double rating
+        varchar status
+        datetime created_at
+        datetime updated_at
+    }
+
+    PURCHASE_ORDERS {
+        bigint id PK
+        varchar order_number UK
+        bigint buyer_id FK
+        bigint supplier_id FK
+        varchar status
+        decimal total_amount
+        decimal tax_amount
+        decimal grand_total
+        varchar delivery_address
+        date expected_delivery_date
+        date actual_delivery_date
+        text notes
+        varchar rejection_reason
+        datetime created_at
+        datetime updated_at
+    }
+
+    ORDER_ITEMS {
+        bigint id PK
+        bigint purchase_order_id FK
+        varchar item_description
+        int quantity
+        decimal unit_price
+        decimal subtotal
+    }

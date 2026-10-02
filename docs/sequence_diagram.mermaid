@@ -1,0 +1,32 @@
+sequenceDiagram
+    autonumber
+    actor Buyer as Buyer User
+    participant Frontend as React Frontend
+    participant API as Spring Boot API
+    participant DB as MySQL / JPA
+    participant PDF as OpenPDF Service
+    actor Admin as System Admin
+    actor Supplier as Supplier Rep
+
+    Note over Buyer, Frontend: 1. Order Creation Workflow
+    Buyer->>Frontend: Fill PO Form (Supplier, Items, Address)
+    Frontend->>API: POST /api/orders (JWT Bearer)
+    API->>DB: Save PO (Status: PENDING) & Line Items
+    API-->>Frontend: 201 Created (OrderResponseDto)
+
+    Note over Admin, API: 2. Review & Approval Workflow
+    Admin->>Frontend: Review Pending Orders
+    Admin->>API: GET /api/orders/{id}/pdf
+    API->>PDF: Generate Purchase Order PDF
+    PDF-->>Frontend: Stream PO-2026-XXXX.pdf
+    Admin->>Frontend: Click "Approve"
+    Frontend->>API: PATCH /api/orders/{id}/status (APPROVED)
+    API->>DB: Update Status = APPROVED
+    API-->>Frontend: 200 OK
+
+    Note over Supplier, DB: 3. Delivery & Fulfillment
+    Supplier->>Frontend: View Assigned Approved Orders
+    Supplier->>Frontend: Click "Deliver"
+    Frontend->>API: PATCH /api/orders/{id}/status (DELIVERED)
+    API->>DB: Update Status = DELIVERED, actualDeliveryDate
+    API-->>Frontend: 200 OK
