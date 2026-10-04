@@ -87,11 +87,11 @@ const MyOrders = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238]">My Purchase Orders</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">My Purchase Orders</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Track requisition statuses, inspect vendor fulfillments, and download authorized PDF documents
           </p>
         </div>

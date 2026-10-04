@@ -64,20 +64,20 @@ const SupplierDashboard = () => {
     .slice(0, 5);
 
   const supplierName =
-    user?.supplierName || orders[0]?.supplier?.name || orders[0]?.supplierName || 'Apex Industrial Supplies';
+    user?.supplierName || orders[0]?.supplier?.name || orders[0]?.supplierName || user?.fullName || 'Verified Supplier';
 
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <div className="flex items-center space-x-2 mb-0.5">
-            <h1 className="text-xl font-bold tracking-tight text-[#263238]">{supplierName}</h1>
+          <div className="flex items-center space-x-2.5 mb-1">
+            <h1 className="text-2xl font-bold tracking-tight text-[#263238]">{supplierName}</h1>
             <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#EDF5F0] text-[#3F7D5A] border border-[#D1E7D9]">
               Authorized Vendor
             </span>
           </div>
-          <p className="text-xs text-[#667085]">
+          <p className="text-sm text-[#667085] mt-1">
             Fulfill purchase orders approved by enterprise buyers and register shipment deliveries
           </p>
         </div>
@@ -85,7 +85,7 @@ const SupplierDashboard = () => {
         {approvedCount > 0 && (
           <button
             onClick={() => navigate('/supplier/orders')}
-            className="inline-flex items-center space-x-2 px-3.5 py-2 bg-[#2563A6] hover:bg-[#1E528B] text-white text-xs font-semibold rounded-lg shadow-xs transition self-start sm:self-auto cursor-pointer"
+            className="inline-flex items-center space-x-2 px-4 py-2 bg-[#2563A6] hover:bg-[#1E528B] text-white text-xs font-semibold rounded-lg shadow-xs transition self-start sm:self-auto cursor-pointer"
           >
             <Truck className="w-4 h-4" />
             <span>{approvedCount} Ready for Delivery</span>

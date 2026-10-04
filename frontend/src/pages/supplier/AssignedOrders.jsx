@@ -112,17 +112,17 @@ const AssignedOrders = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238]">Assigned Purchase Orders</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Assigned Purchase Orders</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Review orders assigned to your company, prepare shipments, and confirm deliveries
           </p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <span className="px-2.5 py-1 bg-[#EDF5F0] border border-[#D1E7D9] text-[#2F6144] text-xs font-semibold rounded-lg">
+          <span className="px-3 py-1.5 bg-[#EDF5F0] border border-[#D1E7D9] text-[#2F6144] text-xs font-semibold rounded-lg shadow-xs">
             {orders.filter((o) => o.status === 'APPROVED').length} Ready to Deliver
           </span>
         </div>

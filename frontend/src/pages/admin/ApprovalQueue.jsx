@@ -129,17 +129,17 @@ const ApprovalQueue = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
+      {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238] tracking-tight">Purchase Order Approval Queue</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Purchase Order Approval Queue</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Review line items, authorize procurement requests, or reject orders with documented justifications
           </p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <span className="px-2.5 py-1 bg-[#FCF7ED] border border-[#F5E6CC] text-[#8F651C] text-xs font-semibold rounded-lg">
+          <span className="px-3 py-1.5 bg-[#FCF7ED] border border-[#F5E6CC] text-[#8F651C] text-xs font-semibold rounded-lg shadow-xs">
             {orders.length} {orders.length === 1 ? 'Order' : 'Orders'} Awaiting Review
           </span>
         </div>

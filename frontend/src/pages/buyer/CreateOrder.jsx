@@ -227,8 +227,8 @@ const CreateOrder = () => {
 
       <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#E2E5E9] shadow-xs">
         <div className="border-b border-[#E2E5E9] pb-4 mb-6">
-          <h1 className="text-xl font-bold text-[#263238]">Create Purchase Order</h1>
-          <p className="text-xs text-[#667085] mt-1">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Create Purchase Order</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Specify vendor, required delivery parameters, and detailed item requisitions
           </p>
         </div>

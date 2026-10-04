@@ -185,7 +185,7 @@ const OrderDetailModal = ({
                 <h5 className="text-[11px] font-bold uppercase tracking-wider">Supplier Details</h5>
               </div>
               <p className="text-sm font-bold text-[#263238]">
-                {order.supplier?.name || order.supplierName || 'Apex Industrial Supplies'}
+                {order.supplier?.name || order.supplierName || 'Verified Supplier'}
               </p>
               <p className="text-xs text-[#667085] mt-0.5">
                 {order.supplier?.companyName || order.supplier?.category || 'Hardware & Components'}

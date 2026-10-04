@@ -299,7 +299,7 @@ const Suppliers = () => {
                   required
                   value={formData.companyName}
                   onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                  placeholder="Apex Industrial Supplies"
+                  placeholder="Global Tech Enterprises"
                   className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
               </div>
@@ -311,7 +311,7 @@ const Suppliers = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="John Apex"
+                  placeholder="John Smith"
                   className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
               </div>
@@ -334,7 +334,7 @@ const Suppliers = () => {
                     type="text"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+1-555-0199"
+                    placeholder="+91-98765-43210"
                     className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
                   />
                 </div>
@@ -361,7 +361,7 @@ const Suppliers = () => {
                   type="text"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  placeholder="100 Industrial Parkway, Chicago, IL"
+                  placeholder="45 Tech Industrial Park, Mumbai, MH"
                   className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
               </div>

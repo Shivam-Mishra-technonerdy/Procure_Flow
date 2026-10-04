@@ -15,19 +15,28 @@ const StatCard = ({ title, value, icon: Icon, change, trend = 'up', color = 'blu
     crimson: 'bg-[#FDF2F2] text-[#B84C4C] border-[#F8D7DA]',
   };
 
+  const supportingText = change || (typeof trend === 'string' && trend !== 'up' && trend !== 'down' ? trend : null);
+  const isPositive = typeof trend === 'string' && (trend.startsWith('+') || trend === 'up');
+
   return (
     <div className="bg-white rounded-xl border border-[#E2E5E9] p-5 shadow-xs hover:border-[#2563A6]/40 hover:shadow-sm transition-all duration-200">
       <div className="flex items-center justify-between">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#667085]">{title}</p>
-          <h3 className="text-2xl font-bold text-[#263238] tracking-tight mt-1">{value}</h3>
-          {change && (
-            <p className={`text-xs mt-2 font-medium flex items-center ${trend === 'up' ? 'text-[#3F7D5A]' : 'text-[#667085]'}`}>
-              {trend === 'up' ? '↑' : '•'} {change}
+        <div className="min-w-0 flex-1 pr-2">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#667085] truncate">
+            {title}
+          </p>
+          <h3 className="text-2xl font-bold text-[#263238] tracking-tight mt-1 truncate">
+            {value}
+          </h3>
+          {supportingText && (
+            <p className={`text-xs mt-2 font-medium flex items-center gap-1 truncate ${
+              isPositive ? 'text-[#3F7D5A]' : 'text-[#667085]'
+            }`}>
+              {isPositive ? '↑' : '•'} <span>{supportingText}</span>
             </p>
           )}
         </div>
-        <div className={`p-3 rounded-lg border ${colorMap[color] || colorMap.blue}`}>
+        <div className={`p-3 rounded-lg border flex-shrink-0 ${colorMap[color] || colorMap.blue}`}>
           <Icon className="w-5 h-5" />
         </div>
       </div>

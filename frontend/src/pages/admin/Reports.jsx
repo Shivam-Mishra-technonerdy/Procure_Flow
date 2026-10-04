@@ -168,18 +168,18 @@ const Reports = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238]">Procurement Reports & Analytics</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Procurement Reports & Analytics</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Comprehensive audit reports, vendor spend distribution, and order volume metrics
           </p>
         </div>
 
         <button
           onClick={handleExportJson}
-          className="flex items-center space-x-2 px-3.5 py-2 bg-[#172B4D] hover:bg-[#1E3863] text-white text-xs font-semibold rounded-lg shadow-xs transition cursor-pointer"
+          className="flex items-center space-x-2 px-4 py-2 bg-[#172B4D] hover:bg-[#1E3863] text-white text-xs font-semibold rounded-lg shadow-xs transition cursor-pointer self-start sm:self-auto"
         >
           <Download className="w-4 h-4" />
           <span>Export Report Data (JSON)</span>

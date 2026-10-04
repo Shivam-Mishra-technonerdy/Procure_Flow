@@ -146,11 +146,11 @@ const AdminDashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* Top Header */}
+      {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238] tracking-tight">Executive Procurement Overview</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Executive Procurement Overview</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Monitor purchase order approvals, supplier compliance, and corporate procurement expenses in real time.
           </p>
         </div>
@@ -158,7 +158,7 @@ const AdminDashboard = () => {
         {stats?.pendingOrders > 0 && (
           <button
             onClick={() => navigate('/admin/approval-queue')}
-            className="flex items-center space-x-2 px-3.5 py-2 bg-[#B9852C] hover:bg-[#8F651C] text-white text-xs font-semibold rounded-lg shadow-xs transition cursor-pointer self-start sm:self-auto"
+            className="flex items-center space-x-2 px-4 py-2 bg-[#B9852C] hover:bg-[#8F651C] text-white text-xs font-semibold rounded-lg shadow-xs transition cursor-pointer self-start sm:self-auto"
           >
             <Clock className="w-4 h-4" />
             <span>Review {stats.pendingOrders} Pending Orders</span>

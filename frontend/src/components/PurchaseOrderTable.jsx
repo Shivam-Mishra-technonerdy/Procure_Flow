@@ -40,13 +40,13 @@ const PurchaseOrderTable = ({
         <table className="w-full text-left text-xs">
           <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
             <tr>
-              <th className="px-4 py-3">Order #</th>
-              {showSupplierColumn && <th className="px-4 py-3">Supplier</th>}
-              {showBuyerColumn && <th className="px-4 py-3">Buyer</th>}
-              <th className="px-4 py-3">Date</th>
-              <th className="px-4 py-3">Status</th>
-              <th className="px-4 py-3 text-right">Total Amount</th>
-              <th className="px-4 py-3 text-center">Actions</th>
+              <th className="px-5 py-3.5">Order #</th>
+              {showSupplierColumn && <th className="px-5 py-3.5">Supplier</th>}
+              {showBuyerColumn && <th className="px-5 py-3.5">Buyer</th>}
+              <th className="px-5 py-3.5">Date</th>
+              <th className="px-5 py-3.5">Status</th>
+              <th className="px-5 py-3.5 text-right">Total Amount</th>
+              <th className="px-5 py-3.5 text-center">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#E2E5E9] text-[#263238]">
@@ -59,9 +59,9 @@ const PurchaseOrderTable = ({
               return (
                 <tr
                   key={order.id}
-                  className="hover:bg-[#F7F5F0]/60 transition-colors duration-150 group"
+                  className="hover:bg-[#F7F5F0]/70 transition-colors duration-150 group"
                 >
-                  <td className="px-4 py-3 font-semibold text-[#263238]">
+                  <td className="px-5 py-3.5 font-semibold text-[#263238]">
                     <button
                       onClick={() => onViewOrder && onViewOrder(order)}
                       className="hover:text-[#2563A6] transition flex items-center space-x-1.5 cursor-pointer font-medium"
@@ -72,39 +72,39 @@ const PurchaseOrderTable = ({
                   </td>
 
                   {showSupplierColumn && (
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-3.5">
                       <div className="flex items-center space-x-1.5 font-medium text-[#263238]">
-                        <Building2 className="w-3.5 h-3.5 text-[#667085]" />
-                        <span>{supplierName}</span>
+                        <Building2 className="w-3.5 h-3.5 text-[#667085] flex-shrink-0" />
+                        <span className="truncate max-w-[180px]">{supplierName}</span>
                       </div>
                     </td>
                   )}
 
                   {showBuyerColumn && (
-                    <td className="px-4 py-3 text-[#667085]">
-                      <span>{buyerName}</span>
+                    <td className="px-5 py-3.5 text-[#667085]">
+                      <span className="truncate max-w-[150px] block">{buyerName}</span>
                     </td>
                   )}
 
-                  <td className="px-4 py-3 text-[#667085]">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-3 h-3 text-[#667085]" />
+                  <td className="px-5 py-3.5 text-[#667085] whitespace-nowrap">
+                    <div className="flex items-center space-x-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-[#667085]" />
                       <span>{formatDate(order.orderDate || order.createdAt)}</span>
                     </div>
                   </td>
 
-                  <td className="px-4 py-3">
+                  <td className="px-5 py-3.5 whitespace-nowrap">
                     <StatusBadge status={order.status} />
                   </td>
 
-                  <td className="px-4 py-3 text-right font-bold text-[#263238]">
+                  <td className="px-5 py-3.5 text-right font-bold text-[#263238] whitespace-nowrap">
                     <div>{formatCurrency(order.totalAmount, order.currencyCode)}</div>
                     {order.currencyCode && order.currencyCode !== 'INR' && (
                       <span className="text-[10px] text-[#667085] font-mono">({order.currencyCode})</span>
                     )}
                   </td>
 
-                  <td className="px-4 py-3">
+                  <td className="px-5 py-3.5">
                     <div className="flex items-center justify-center space-x-1">
                       {/* View details */}
                       <button

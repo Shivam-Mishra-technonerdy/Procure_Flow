@@ -63,10 +63,10 @@ const BuyerDashboard = () => {
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold tracking-tight text-[#263238]">Buyer Procurement Desk</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold tracking-tight text-[#263238]">Buyer Procurement Desk</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Manage purchase requisitions, track vendor fulfillment, and inspect issued PO documents
           </p>
         </div>

@@ -195,18 +195,18 @@ const Suppliers = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
+      {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl font-bold text-[#263238] tracking-tight">Supplier Directory & Management</h1>
-          <p className="text-xs text-[#667085] mt-0.5">
+          <h1 className="text-2xl font-bold text-[#263238] tracking-tight">Supplier Directory & Management</h1>
+          <p className="text-sm text-[#667085] mt-1">
             Manage authorized vendors, performance ratings, contact records, and active procurement status
           </p>
         </div>
 
         <button
           onClick={openAddModal}
-          className="flex items-center space-x-2 px-3.5 py-2 bg-[#2563A6] hover:bg-[#1E528B] text-white text-xs font-semibold rounded-lg shadow-xs transition self-start sm:self-auto cursor-pointer"
+          className="flex items-center space-x-2 px-4 py-2 bg-[#2563A6] hover:bg-[#1E528B] text-white text-xs font-semibold rounded-lg shadow-xs transition self-start sm:self-auto cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Add New Supplier</span>
