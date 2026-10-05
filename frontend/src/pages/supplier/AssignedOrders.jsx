@@ -137,7 +137,7 @@ const AssignedOrders = () => {
             placeholder="Search by order number or buyer..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
+            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
           />
         </div>
 
@@ -154,7 +154,7 @@ const AssignedOrders = () => {
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition whitespace-nowrap cursor-pointer ${
                 statusFilter === tab.id
                   ? 'bg-[#172B4D] text-white shadow-xs'
-                  : 'bg-[#F7F5F0] text-[#667085] hover:bg-[#E2E5E9]'
+                  : 'bg-[#F8F9FA] text-[#667085] hover:bg-[#E2E5E9]'
               }`}
             >
               {tab.label}
@@ -174,7 +174,7 @@ const AssignedOrders = () => {
         <div className="bg-white rounded-xl border border-[#E2E5E9] overflow-hidden shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
+              <thead className="bg-[#F8F9FA] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
                 <tr>
                   <th className="px-5 py-3.5">Order #</th>
                   <th className="px-5 py-3.5">Buyer</th>
@@ -191,7 +191,7 @@ const AssignedOrders = () => {
                     order.buyer?.fullName || order.buyerName || order.createdBy?.fullName || 'Buyer';
 
                   return (
-                    <tr key={order.id} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                    <tr key={order.id} className="hover:bg-[#F8F9FA] transition-colors duration-150">
                       <td className="px-5 py-3.5 font-semibold text-[#263238]">
                         {order.orderNumber || `PO #${order.id}`}
                       </td>

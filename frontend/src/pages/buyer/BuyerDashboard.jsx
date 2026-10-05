@@ -7,7 +7,6 @@ import {
   CheckCircle2,
   Truck,
   ArrowRight,
-  ChevronRight,
 } from 'lucide-react';
 import { orderApi } from '../../api';
 import { formatCurrency, formatDate } from '../../utils/formatters';
@@ -78,45 +77,6 @@ const BuyerDashboard = () => {
         </button>
       </div>
 
-      {/* Visual Workflow Steps Panel */}
-      <div className="bg-white rounded-xl border border-[#E2E5E9] p-4 sm:p-5 shadow-xs">
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#667085]">
-            Procurement Lifecycle Workflow
-          </span>
-          <span className="text-[11px] font-semibold text-[#2563A6]">
-            Requisition to Receipt
-          </span>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
-          <div className="p-3 rounded-lg bg-[#EAF2FA] border border-[#D0E2F5] flex flex-col justify-between">
-            <span className="text-[10px] font-bold text-[#2563A6] uppercase tracking-wider">Step 1</span>
-            <p className="text-xs font-bold text-[#172B4D] mt-1">Create PO</p>
-            <p className="text-[10px] text-[#667085] mt-0.5">Start requisition</p>
-          </div>
-          <div className="p-3 rounded-lg bg-[#F7F5F0] border border-[#E2E5E9] flex flex-col justify-between">
-            <span className="text-[10px] font-bold text-[#667085] uppercase tracking-wider">Step 2</span>
-            <p className="text-xs font-bold text-[#263238] mt-1">Select Supplier</p>
-            <p className="text-[10px] text-[#667085] mt-0.5">Choose verified vendor</p>
-          </div>
-          <div className="p-3 rounded-lg bg-[#F7F5F0] border border-[#E2E5E9] flex flex-col justify-between">
-            <span className="text-[10px] font-bold text-[#667085] uppercase tracking-wider">Step 3</span>
-            <p className="text-xs font-bold text-[#263238] mt-1">Enter Details</p>
-            <p className="text-[10px] text-[#667085] mt-0.5">Items & destination</p>
-          </div>
-          <div className="p-3 rounded-lg bg-[#FCF7ED] border border-[#F5E6CC] flex flex-col justify-between">
-            <span className="text-[10px] font-bold text-[#B9852C] uppercase tracking-wider">Step 4</span>
-            <p className="text-xs font-bold text-[#8F651C] mt-1">Admin Review</p>
-            <p className="text-[10px] text-[#667085] mt-0.5">Approval verification</p>
-          </div>
-          <div className="p-3 rounded-lg bg-[#EDF5F0] border border-[#D1E7D9] flex flex-col justify-between">
-            <span className="text-[10px] font-bold text-[#3F7D5A] uppercase tracking-wider">Step 5</span>
-            <p className="text-xs font-bold text-[#2F6144] mt-1">Fulfillment</p>
-            <p className="text-[10px] text-[#667085] mt-0.5">Vendor delivery</p>
-          </div>
-        </div>
-      </div>
-
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
@@ -169,7 +129,7 @@ const BuyerDashboard = () => {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
+            <thead className="bg-[#F8F9FA] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
               <tr>
                 <th className="px-5 py-3.5">Order #</th>
                 <th className="px-5 py-3.5">Supplier</th>
@@ -188,7 +148,7 @@ const BuyerDashboard = () => {
                 </tr>
               ) : (
                 recentOrders.map((order) => (
-                  <tr key={order.id} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                  <tr key={order.id} className="hover:bg-[#F8F9FA] transition-colors duration-150">
                     <td className="px-5 py-3.5 font-semibold text-[#263238]">
                       {order.orderNumber || `PO #${order.id}`}
                     </td>

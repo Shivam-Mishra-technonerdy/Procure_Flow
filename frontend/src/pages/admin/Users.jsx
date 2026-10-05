@@ -422,7 +422,7 @@ const Users = () => {
             placeholder="Search by full name or email address..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
+            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
           />
         </div>
 
@@ -438,7 +438,7 @@ const Users = () => {
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer ${
                 roleFilter === r
                   ? 'bg-[#172B4D] text-white shadow-xs'
-                  : 'bg-[#F7F5F0] text-[#667085] hover:bg-[#E2E5E9]'
+                  : 'bg-[#F8F9FA] text-[#667085] hover:bg-[#E2E5E9]'
               }`}
             >
               {r}
@@ -460,7 +460,7 @@ const Users = () => {
                     : s === 'INACTIVE'
                     ? 'bg-[#B84C4C] text-white shadow-xs'
                     : 'bg-[#172B4D] text-white shadow-xs'
-                  : 'bg-[#F7F5F0] text-[#667085] hover:bg-[#E2E5E9]'
+                  : 'bg-[#F8F9FA] text-[#667085] hover:bg-[#E2E5E9]'
               }`}
             >
               {s}
@@ -473,7 +473,7 @@ const Users = () => {
       <div className="bg-white rounded-xl border border-[#E2E5E9] shadow-xs overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
+            <thead className="bg-[#F8F9FA] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
               <tr>
                 <th className="px-5 py-3.5">User</th>
                 <th className="px-5 py-3.5">Email Address</th>
@@ -499,7 +499,7 @@ const Users = () => {
                   const isCurrent = currentUser?.id === u.id || currentUser?.email === u.email;
 
                   return (
-                    <tr key={u.id} className="hover:bg-[#F7F5F0]/60 transition-colors">
+                    <tr key={u.id} className="hover:bg-[#F8F9FA] transition-colors">
                       {/* Name & Avatar */}
                       <td className="px-5 py-3.5">
                         <div className="flex items-center space-x-3">
@@ -516,7 +516,7 @@ const Users = () => {
                             <div className="flex items-center gap-1.5">
                               <p className="font-bold text-[#263238]">{u.fullName || u.email.split('@')[0]}</p>
                               {isCurrent && (
-                                <span className="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[#F7F5F0] text-[#667085] border border-[#E2E5E9]">
+                                <span className="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[#F8F9FA] text-[#667085] border border-[#E2E5E9]">
                                   You
                                 </span>
                               )}
@@ -669,7 +669,7 @@ const Users = () => {
               </div>
               <button
                 onClick={() => setIsAddModalOpen(false)}
-                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] cursor-pointer"
+                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -689,7 +689,7 @@ const Users = () => {
                     value={addForm.fullName}
                     onChange={(e) => setAddForm({ ...addForm, fullName: e.target.value })}
                     placeholder="e.g. Alice Walker"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
 
@@ -704,7 +704,7 @@ const Users = () => {
                     value={addForm.email}
                     onChange={(e) => setAddForm({ ...addForm, email: e.target.value })}
                     placeholder="alice@example.com"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -723,7 +723,7 @@ const Users = () => {
                     value={addForm.password}
                     onChange={(e) => setAddForm({ ...addForm, password: e.target.value })}
                     placeholder="••••••••"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
 
@@ -739,7 +739,7 @@ const Users = () => {
                     value={addForm.confirmPassword}
                     onChange={(e) => setAddForm({ ...addForm, confirmPassword: e.target.value })}
                     placeholder="••••••••"
-                    className={`w-full text-xs p-2.5 bg-[#F7F5F0] border rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition ${
+                    className={`w-full text-xs p-2.5 bg-[#F8F9FA] border rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition ${
                       addForm.confirmPassword && addForm.password !== addForm.confirmPassword
                         ? 'border-[#B84C4C] focus:ring-[#B84C4C]'
                         : 'border-[#E2E5E9]'
@@ -761,7 +761,7 @@ const Users = () => {
                   <select
                     value={addForm.role}
                     onChange={(e) => setAddForm({ ...addForm, role: e.target.value })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="BUYER">BUYER (Create & track purchase orders)</option>
                     <option value="ADMIN">ADMIN (Full management rights)</option>
@@ -777,7 +777,7 @@ const Users = () => {
                   <select
                     value={addForm.active ? 'true' : 'false'}
                     onChange={(e) => setAddForm({ ...addForm, active: e.target.value === 'true' })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="true">Active (Can log in)</option>
                     <option value="false">Inactive (Login disabled)</option>
@@ -833,7 +833,7 @@ const Users = () => {
                           phoneCountryCode: match ? match.phoneCode : addForm.phoneCountryCode,
                         });
                       }}
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     >
                       {ISO_COUNTRIES.map((c) => (
                         <option key={c.code} value={c.code}>
@@ -852,7 +852,7 @@ const Users = () => {
                       <select
                         value={addForm.phoneCountryCode}
                         onChange={(e) => setAddForm({ ...addForm, phoneCountryCode: e.target.value })}
-                        className="w-28 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                        className="w-28 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                       >
                         {PHONE_COUNTRY_CODES.map((p) => (
                           <option key={p.code} value={p.code}>
@@ -865,7 +865,7 @@ const Users = () => {
                         value={addForm.phoneNumber}
                         onChange={(e) => setAddForm({ ...addForm, phoneNumber: e.target.value })}
                         placeholder="e.g. 9876543210"
-                        className="flex-1 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                        className="flex-1 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                       />
                     </div>
                   </div>
@@ -882,7 +882,7 @@ const Users = () => {
                       value={addForm.addressLine1}
                       onChange={(e) => setAddForm({ ...addForm, addressLine1: e.target.value })}
                       placeholder="Street address, building, suite"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -894,7 +894,7 @@ const Users = () => {
                       value={addForm.addressLine2}
                       onChange={(e) => setAddForm({ ...addForm, addressLine2: e.target.value })}
                       placeholder="Apartment, unit, floor, etc."
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                 </div>
@@ -910,7 +910,7 @@ const Users = () => {
                       value={addForm.city}
                       onChange={(e) => setAddForm({ ...addForm, city: e.target.value })}
                       placeholder="City"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -922,7 +922,7 @@ const Users = () => {
                       value={addForm.stateProvince}
                       onChange={(e) => setAddForm({ ...addForm, stateProvince: e.target.value })}
                       placeholder="State / Region"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -934,7 +934,7 @@ const Users = () => {
                       value={addForm.postalCode}
                       onChange={(e) => setAddForm({ ...addForm, postalCode: e.target.value })}
                       placeholder="Postal code"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                 </div>
@@ -945,7 +945,7 @@ const Users = () => {
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -979,7 +979,7 @@ const Users = () => {
               </div>
               <button
                 onClick={() => setIsEditModalOpen(false)}
-                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] cursor-pointer"
+                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -999,7 +999,7 @@ const Users = () => {
                     value={editForm.fullName}
                     onChange={(e) => setEditForm({ ...editForm, fullName: e.target.value })}
                     placeholder="e.g. Alice Walker"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
 
@@ -1014,7 +1014,7 @@ const Users = () => {
                     value={editForm.email}
                     onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
                     placeholder="alice@example.com"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -1029,7 +1029,7 @@ const Users = () => {
                   <select
                     value={editForm.role}
                     onChange={(e) => setEditForm({ ...editForm, role: e.target.value })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="BUYER">BUYER (Create and track purchase orders)</option>
                     <option value="ADMIN">ADMIN (Full administrative rights)</option>
@@ -1045,7 +1045,7 @@ const Users = () => {
                   <select
                     value={editForm.active ? 'true' : 'false'}
                     onChange={(e) => setEditForm({ ...editForm, active: e.target.value === 'true' })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="true">Active</option>
                     <option value="false">Inactive</option>
@@ -1098,7 +1098,7 @@ const Users = () => {
                           phoneCountryCode: match ? match.phoneCode : editForm.phoneCountryCode,
                         });
                       }}
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     >
                       {ISO_COUNTRIES.map((c) => (
                         <option key={c.code} value={c.code}>
@@ -1117,7 +1117,7 @@ const Users = () => {
                       <select
                         value={editForm.phoneCountryCode}
                         onChange={(e) => setEditForm({ ...editForm, phoneCountryCode: e.target.value })}
-                        className="w-28 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                        className="w-28 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                       >
                         {PHONE_COUNTRY_CODES.map((p) => (
                           <option key={p.code} value={p.code}>
@@ -1130,7 +1130,7 @@ const Users = () => {
                         value={editForm.phoneNumber}
                         onChange={(e) => setEditForm({ ...editForm, phoneNumber: e.target.value })}
                         placeholder="e.g. 9876543210"
-                        className="flex-1 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                        className="flex-1 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                       />
                     </div>
                   </div>
@@ -1147,7 +1147,7 @@ const Users = () => {
                       value={editForm.addressLine1}
                       onChange={(e) => setEditForm({ ...editForm, addressLine1: e.target.value })}
                       placeholder="Street address, building, suite"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -1159,7 +1159,7 @@ const Users = () => {
                       value={editForm.addressLine2}
                       onChange={(e) => setEditForm({ ...editForm, addressLine2: e.target.value })}
                       placeholder="Apartment, unit, floor, etc."
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                 </div>
@@ -1175,7 +1175,7 @@ const Users = () => {
                       value={editForm.city}
                       onChange={(e) => setEditForm({ ...editForm, city: e.target.value })}
                       placeholder="City"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -1187,7 +1187,7 @@ const Users = () => {
                       value={editForm.stateProvince}
                       onChange={(e) => setEditForm({ ...editForm, stateProvince: e.target.value })}
                       placeholder="State / Region"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                   <div>
@@ -1199,7 +1199,7 @@ const Users = () => {
                       value={editForm.postalCode}
                       onChange={(e) => setEditForm({ ...editForm, postalCode: e.target.value })}
                       placeholder="Postal code"
-                      className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                      className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                     />
                   </div>
                 </div>
@@ -1210,7 +1210,7 @@ const Users = () => {
                 <button
                   type="button"
                   onClick={() => setIsEditModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -1244,13 +1244,13 @@ const Users = () => {
               </div>
               <button
                 onClick={() => setIsResetModalOpen(false)}
-                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] cursor-pointer"
+                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="mb-4 p-3 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg">
+            <div className="mb-4 p-3 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg">
               <p className="text-[11px] font-semibold text-[#263238]">{resetForm.userName}</p>
               <p className="text-[10px] text-[#667085] font-mono">{resetForm.userEmail}</p>
             </div>
@@ -1267,7 +1267,7 @@ const Users = () => {
                   value={resetForm.newPassword}
                   onChange={(e) => setResetForm({ ...resetForm, newPassword: e.target.value })}
                   placeholder="••••••••"
-                  className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                  className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                 />
               </div>
 
@@ -1282,7 +1282,7 @@ const Users = () => {
                   value={resetForm.confirmPassword}
                   onChange={(e) => setResetForm({ ...resetForm, confirmPassword: e.target.value })}
                   placeholder="••••••••"
-                  className={`w-full text-xs p-2.5 bg-[#F7F5F0] border rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition ${
+                  className={`w-full text-xs p-2.5 bg-[#F8F9FA] border rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition ${
                     resetForm.confirmPassword && resetForm.newPassword !== resetForm.confirmPassword
                       ? 'border-[#B84C4C] focus:ring-[#B84C4C]'
                       : 'border-[#E2E5E9]'
@@ -1297,7 +1297,7 @@ const Users = () => {
                 <button
                   type="button"
                   onClick={() => setIsResetModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
                 >
                   Cancel
                 </button>

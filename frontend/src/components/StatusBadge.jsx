@@ -6,7 +6,7 @@ const StatusBadge = ({ status }) => {
     APPROVED: 'bg-[#EDF5F0] text-[#2F6144] border-[#C2E2CE]',
     DELIVERED: 'bg-[#EBF5EE] text-[#26533A] border-[#B2DAC1]',
     REJECTED: 'bg-[#FDF2F2] text-[#933737] border-[#F5C4C4]',
-    CANCELLED: 'bg-[#F7F5F0] text-[#667085] border-[#E2E5E9]',
+    CANCELLED: 'bg-[#F8F9FA] text-[#667085] border-[#E2E5E9]',
   };
 
   const labels = {
@@ -17,7 +17,7 @@ const StatusBadge = ({ status }) => {
     CANCELLED: 'Cancelled',
   };
 
-  const currentStyle = styles[status] || 'bg-[#F7F5F0] text-[#667085] border-[#E2E5E9]';
+  const currentStyle = styles[status] || 'bg-[#F8F9FA] text-[#667085] border-[#E2E5E9]';
   const label = labels[status] || status;
 
   return (

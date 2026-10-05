@@ -100,7 +100,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F5F0] flex items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
       <div className="max-w-md w-full">
         {/* Brand Header */}
         <div className="text-center mb-6">
@@ -135,7 +135,7 @@ const Register = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Sarah Connor"
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
               />
             </div>
 
@@ -148,7 +148,7 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="sconnor"
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
               />
             </div>
 
@@ -161,7 +161,7 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="sarah@example.com"
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
               />
             </div>
 
@@ -172,7 +172,7 @@ const Register = () => {
                 required
                 value={formData.role}
                 onChange={handleChange}
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
               >
                 <option value="">Select Account Role</option>
                 <option value="ADMIN">Admin</option>
@@ -190,7 +190,7 @@ const Register = () => {
                   value={formData.supplierId}
                   onChange={handleChange}
                   disabled={loadingSuppliers}
-                  className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                  className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                 >
                   <option value="">
                     {loadingSuppliers ? 'Loading suppliers...' : 'Select Supplier Company'}
@@ -214,7 +214,7 @@ const Register = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="At least 6 characters"
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
               />
             </div>
 
@@ -228,7 +228,7 @@ const Register = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Re-enter your password"
-                className="w-full px-3 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                className="w-full px-3 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
               />
             </div>
 

@@ -61,7 +61,7 @@ const ConfirmDialog = ({
           <button
             onClick={onClose}
             disabled={loading}
-            className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] transition cursor-pointer"
+            className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] transition cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -82,7 +82,7 @@ const ConfirmDialog = ({
                 if (validationError) setValidationError('');
               }}
               placeholder={remarksPlaceholder}
-              className="w-full text-xs p-3 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition resize-none placeholder:text-[#667085]/60"
+              className="w-full text-xs p-3 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition resize-none placeholder:text-[#667085]/60"
             />
             {validationError && (
               <p className="text-[11px] text-[#B84C4C] font-medium mt-1">{validationError}</p>
@@ -95,7 +95,7 @@ const ConfirmDialog = ({
             type="button"
             onClick={onClose}
             disabled={loading}
-            className="px-4 py-2 text-xs font-semibold text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
           >
             {cancelText}
           </button>

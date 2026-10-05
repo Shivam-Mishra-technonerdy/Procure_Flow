@@ -22,7 +22,7 @@ const DashboardLayout = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex bg-[#F7F5F0] text-[#263238] font-sans antialiased">
+    <div className="min-h-screen flex bg-white text-[#263238] font-sans antialiased">
       {/* 1. Desktop Full-Height Dark Left Sidebar */}
       <div className="hidden lg:flex flex-col w-64 bg-[#172B4D] border-r border-[#0F1D33] h-screen sticky top-0 flex-shrink-0 z-30">
         <Sidebar onCloseMobile={() => {}} />

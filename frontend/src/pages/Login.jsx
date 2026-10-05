@@ -61,7 +61,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F5F0] flex items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-6">
       <div className="max-w-md w-full">
         {/* Brand Header */}
         <div className="text-center mb-6">
@@ -102,7 +102,7 @@ const Login = () => {
                   <RefreshCw className="w-3 h-3 ml-0.5 text-[#B84C4C]" />
                 </button>
               ) : (
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#F7F5F0] text-[#667085] border border-[#E2E5E9]">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#F8F9FA] text-[#667085] border border-[#E2E5E9]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#667085] animate-ping"></span>
                   <span>Checking...</span>
                 </div>
@@ -127,7 +127,7 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
-                  className="w-full pl-10 pr-3.5 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                  className="w-full pl-10 pr-3.5 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-3.5 py-2 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
+                  className="w-full pl-10 pr-3.5 py-2 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition placeholder:text-[#667085]/60"
                 />
               </div>
             </div>

@@ -23,10 +23,10 @@ export default {
           soft: '#EAF2FA',
         },
         ivory: {
-          DEFAULT: '#F7F5F0',
-          canvas: '#F7F5F0',
+          DEFAULT: '#FFFFFF',
+          canvas: '#FFFFFF',
           surface: '#FFFFFF',
-          muted: '#EFECE4',
+          muted: '#F8F9FA',
         },
         charcoal: {
           DEFAULT: '#263238',

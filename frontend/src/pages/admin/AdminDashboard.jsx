@@ -281,7 +281,7 @@ const AdminDashboard = () => {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
+            <thead className="bg-[#F8F9FA] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
               <tr>
                 <th className="px-5 py-3.5">Order #</th>
                 <th className="px-5 py-3.5">Supplier</th>
@@ -301,7 +301,7 @@ const AdminDashboard = () => {
                 </tr>
               ) : (
                 recentOrders.map((order) => (
-                  <tr key={order.id} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                  <tr key={order.id} className="hover:bg-[#F8F9FA] transition-colors duration-150">
                     <td className="px-5 py-3.5 font-semibold text-[#263238]">
                       {order.orderNumber || `PO #${order.id}`}
                     </td>

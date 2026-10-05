@@ -55,7 +55,7 @@ const Navbar = ({ onMobileMenuToggle }) => {
           {onMobileMenuToggle && (
             <button
               onClick={onMobileMenuToggle}
-              className="lg:hidden p-2 rounded-lg text-[#667085] hover:bg-[#F7F5F0] transition cursor-pointer"
+              className="lg:hidden p-2 rounded-lg text-[#667085] hover:bg-[#F8F9FA] transition cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               <Menu className="w-5 h-5" />
@@ -88,7 +88,7 @@ const Navbar = ({ onMobileMenuToggle }) => {
             href="http://localhost:8080/swagger-ui.html"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#263238] hover:text-[#172B4D] bg-[#F7F5F0] hover:bg-[#EFECE4] border border-[#E2E5E9] transition"
+            className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#263238] hover:text-[#172B4D] bg-[#F8F9FA] hover:bg-[#ECEEF1] border border-[#E2E5E9] transition"
             title="Open Swagger OpenAPI Documentation"
           >
             <span>Swagger</span>
@@ -99,7 +99,7 @@ const Navbar = ({ onMobileMenuToggle }) => {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setShowProfileDropdown(!showProfileDropdown)}
-              className="flex items-center space-x-2.5 pl-2 pr-1.5 py-1 rounded-lg hover:bg-[#F7F5F0] transition cursor-pointer border border-transparent hover:border-[#E2E5E9]"
+              className="flex items-center space-x-2.5 pl-2 pr-1.5 py-1 rounded-lg hover:bg-[#F8F9FA] transition cursor-pointer border border-transparent hover:border-[#E2E5E9]"
             >
               <div className="w-7 h-7 rounded-lg bg-[#172B4D] text-white font-semibold text-xs flex items-center justify-center">
                 {user?.fullName?.charAt(0) || user?.email?.charAt(0) || 'U'}

@@ -258,8 +258,8 @@ const CreateOrder = () => {
               <button
                 type="button"
                 onClick={() => setIsSupplierDropdownOpen(!isSupplierDropdownOpen)}
-                className={`w-full text-left p-2.5 bg-[#F7F5F0] border rounded-lg flex items-center justify-between transition focus:outline-none focus:ring-2 focus:ring-[#2563A6] cursor-pointer ${
-                  isSupplierDropdownOpen ? 'border-[#2563A6] ring-2 ring-[#EAF2FA] bg-white' : 'border-[#E2E5E9] hover:bg-[#F7F5F0]/80'
+                className={`w-full text-left p-2.5 bg-[#F8F9FA] border rounded-lg flex items-center justify-between transition focus:outline-none focus:ring-2 focus:ring-[#2563A6] cursor-pointer ${
+                  isSupplierDropdownOpen ? 'border-[#2563A6] ring-2 ring-[#EAF2FA] bg-white' : 'border-[#E2E5E9] hover:bg-[#F8F9FA]'
                 }`}
               >
                 {selectedSupplierObj ? (
@@ -291,7 +291,7 @@ const CreateOrder = () => {
               {isSupplierDropdownOpen && (
                 <div className="absolute z-50 mt-1 left-0 right-0 bg-white rounded-xl shadow-xl border border-[#E2E5E9] overflow-hidden">
                   {/* Search Bar & Directory Info */}
-                  <div className="p-2.5 border-b border-[#E2E5E9] bg-[#F7F5F0] space-y-2">
+                  <div className="p-2.5 border-b border-[#E2E5E9] bg-[#F8F9FA] space-y-2">
                     <div className="relative">
                       <Search className="w-3.5 h-3.5 text-[#667085] absolute left-3 top-2" />
                       <input
@@ -340,7 +340,7 @@ const CreateOrder = () => {
                             className={`w-full text-left px-3 py-2 rounded-lg flex items-center justify-between transition mt-0.5 cursor-pointer ${
                               s.id.toString() === supplierId
                                 ? 'bg-[#EAF2FA] border border-[#D0E2F5]'
-                                : 'hover:bg-[#F7F5F0]'
+                                : 'hover:bg-[#F8F9FA]'
                             }`}
                           >
                             <div className="flex items-center space-x-2.5 truncate">
@@ -415,7 +415,7 @@ const CreateOrder = () => {
                 min={new Date().toISOString().slice(0, 10)}
                 value={expectedDeliveryDate}
                 onChange={(e) => setExpectedDeliveryDate(e.target.value)}
-                className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
               />
             </div>
           </div>
@@ -431,7 +431,7 @@ const CreateOrder = () => {
                 value={deliveryAddress}
                 onChange={(e) => setDeliveryAddress(e.target.value)}
                 placeholder="e.g. Corporate Receiving Bay 4, Industrial Area, Mumbai"
-                className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
               />
             </div>
 
@@ -444,13 +444,13 @@ const CreateOrder = () => {
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="e.g. Fragile items, deliver during standard receiving hours"
-                className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
               />
             </div>
           </div>
 
           {/* Multi-Currency Selection & Snapshot Exchange Rate */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-[#F7F5F0] rounded-xl border border-[#E2E5E9]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-[#F8F9FA] rounded-xl border border-[#E2E5E9]">
             <div>
               <label className="block text-xs font-semibold text-[#263238] mb-1.5">
                 Order Currency <span className="text-[#B84C4C]">*</span>
@@ -532,7 +532,7 @@ const CreateOrder = () => {
                 return (
                   <div
                     key={index}
-                    className="p-3.5 bg-[#F7F5F0] rounded-xl border border-[#E2E5E9] flex flex-col md:flex-row items-start md:items-center gap-3"
+                    className="p-3.5 bg-[#F8F9FA] rounded-xl border border-[#E2E5E9] flex flex-col md:flex-row items-start md:items-center gap-3"
                   >
                     <div className="w-6 text-center text-xs font-bold text-[#667085]">
                       #{index + 1}
@@ -648,7 +648,7 @@ const CreateOrder = () => {
             <button
               type="button"
               onClick={() => navigate('/buyer/orders')}
-              className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+              className="px-4 py-2 text-xs font-semibold text-[#667085] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
             >
               Cancel
             </button>

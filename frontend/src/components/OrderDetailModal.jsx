@@ -141,7 +141,7 @@ const OrderDetailModal = ({
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Order Lifecycle Progress */}
-          <div className="p-4 bg-[#F7F5F0] rounded-xl border border-[#E2E5E9]">
+          <div className="p-4 bg-[#F8F9FA] rounded-xl border border-[#E2E5E9]">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#667085] mb-3">
               Order Workflow Status
             </h4>
@@ -230,14 +230,14 @@ const OrderDetailModal = ({
 
           {/* Line Items Table */}
           <div className="border border-[#E2E5E9] rounded-xl overflow-hidden shadow-xs">
-            <div className="px-4 py-3 bg-[#F7F5F0] border-b border-[#E2E5E9] flex justify-between items-center">
+            <div className="px-4 py-3 bg-[#F8F9FA] border-b border-[#E2E5E9] flex justify-between items-center">
               <h5 className="text-[11px] font-bold text-[#263238] uppercase tracking-wider">
                 Order Line Items ({items.length})
               </h5>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
+                <thead className="bg-[#F8F9FA] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
                   <tr>
                     <th className="px-4 py-2.5">#</th>
                     <th className="px-4 py-2.5">Item & Description</th>
@@ -254,7 +254,7 @@ const OrderDetailModal = ({
                         ? item.subtotal
                         : (item.quantity || 0) * (item.unitPrice || 0);
                     return (
-                      <tr key={item.id || index} className="hover:bg-[#F7F5F0]/50 transition-colors">
+                      <tr key={item.id || index} className="hover:bg-[#F8F9FA] transition-colors">
                         <td className="px-4 py-3 text-[#667085] font-medium">{index + 1}</td>
                         <td className="px-4 py-3">
                           <p className="font-bold text-[#263238]">{item.itemName || item.itemDescription || 'Standard Item'}</p>
@@ -275,7 +275,7 @@ const OrderDetailModal = ({
             </div>
 
             {/* Totals Breakdown */}
-            <div className="bg-[#F7F5F0] px-6 py-4 border-t border-[#E2E5E9]">
+            <div className="bg-[#F8F9FA] px-6 py-4 border-t border-[#E2E5E9]">
               <div className="max-w-xs ml-auto space-y-1.5 text-xs">
                 <div className="flex justify-between text-[#667085]">
                   <span>Subtotal:</span>
@@ -316,10 +316,10 @@ const OrderDetailModal = ({
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3 bg-[#F7F5F0] border-t border-[#E2E5E9] flex justify-end">
+        <div className="px-6 py-3 bg-[#F8F9FA] border-t border-[#E2E5E9] flex justify-end">
           <button
             onClick={onClose}
-            className="px-4 py-2 text-xs font-semibold bg-white border border-[#E2E5E9] text-[#263238] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold bg-white border border-[#E2E5E9] text-[#263238] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
           >
             Close
           </button>

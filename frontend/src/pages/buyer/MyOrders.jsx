@@ -114,7 +114,7 @@ const MyOrders = () => {
             placeholder="Search by order number or supplier name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
+            className="w-full pl-9 pr-4 py-1.5 text-xs bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
           />
         </div>
 
@@ -126,7 +126,7 @@ const MyOrders = () => {
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition whitespace-nowrap cursor-pointer ${
                 statusFilter === status
                   ? 'bg-[#172B4D] text-white shadow-xs'
-                  : 'bg-[#F7F5F0] text-[#667085] hover:bg-[#E2E5E9]'
+                  : 'bg-[#F8F9FA] text-[#667085] hover:bg-[#E2E5E9]'
               }`}
             >
               {status === 'ALL' ? 'All Orders' : status}

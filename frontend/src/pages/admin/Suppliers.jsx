@@ -222,7 +222,7 @@ const Suppliers = () => {
             placeholder="Search suppliers by name, category, country, or email..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-xs bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
+            className="w-full pl-10 pr-4 py-2 text-xs bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] placeholder:text-[#667085]/60 transition"
           />
         </div>
 
@@ -235,7 +235,7 @@ const Suppliers = () => {
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap cursor-pointer ${
                 categoryFilter === cat
                   ? 'bg-[#172B4D] text-white shadow-xs'
-                  : 'bg-[#F7F5F0] text-[#667085] hover:bg-[#E2E5E9]'
+                  : 'bg-[#F8F9FA] text-[#667085] hover:bg-[#E2E5E9]'
               }`}
             >
               {cat}
@@ -278,7 +278,7 @@ const Suppliers = () => {
                     className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold border ${
                       supplier.active !== false
                         ? 'bg-[#EDF5F0] text-[#3F7D5A] border-[#D1E7D9]'
-                        : 'bg-[#F7F5F0] text-[#667085] border-[#E2E5E9]'
+                        : 'bg-[#F8F9FA] text-[#667085] border-[#E2E5E9]'
                     }`}
                   >
                     {supplier.active !== false ? 'Active' : 'Inactive'}
@@ -361,7 +361,7 @@ const Suppliers = () => {
               </h3>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] cursor-pointer transition"
+                className="p-1 rounded-lg text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] cursor-pointer transition"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -379,7 +379,7 @@ const Suppliers = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. John Doe"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -392,7 +392,7 @@ const Suppliers = () => {
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     placeholder="e.g. Apex Industrial Supplies"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -408,7 +408,7 @@ const Suppliers = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="vendor@example.com"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -426,7 +426,7 @@ const Suppliers = () => {
                         phoneCountryCode: matchedCountry ? matchedCountry.phoneCode : formData.phoneCountryCode,
                       });
                     }}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     {ISO_COUNTRIES.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -445,7 +445,7 @@ const Suppliers = () => {
                   <select
                     value={formData.phoneCountryCode}
                     onChange={(e) => setFormData({ ...formData, phoneCountryCode: e.target.value })}
-                    className="w-28 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-28 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     {PHONE_COUNTRY_CODES.map((item) => (
                       <option key={item.code} value={item.code}>
@@ -458,7 +458,7 @@ const Suppliers = () => {
                     value={formData.phoneNumber}
                     onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                     placeholder="e.g. 9876543210"
-                    className="flex-1 text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="flex-1 text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -473,7 +473,7 @@ const Suppliers = () => {
                     value={formData.addressLine1}
                     onChange={(e) => setFormData({ ...formData, addressLine1: e.target.value })}
                     placeholder="Street address or P.O. Box"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -485,7 +485,7 @@ const Suppliers = () => {
                     value={formData.addressLine2}
                     onChange={(e) => setFormData({ ...formData, addressLine2: e.target.value })}
                     placeholder="Suite, unit, building, floor"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -498,7 +498,7 @@ const Suppliers = () => {
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     placeholder="e.g. Mumbai"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -508,7 +508,7 @@ const Suppliers = () => {
                     value={formData.stateProvince}
                     onChange={(e) => setFormData({ ...formData, stateProvince: e.target.value })}
                     placeholder="e.g. Maharashtra"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -518,7 +518,7 @@ const Suppliers = () => {
                     value={formData.postalCode}
                     onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
                     placeholder="e.g. 400001"
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
               </div>
@@ -529,7 +529,7 @@ const Suppliers = () => {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="Electronics">Electronics</option>
                     <option value="Hardware">Hardware</option>
@@ -547,7 +547,7 @@ const Suppliers = () => {
                     max="5"
                     value={formData.rating}
                     onChange={(e) => setFormData({ ...formData, rating: parseFloat(e.target.value) })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   />
                 </div>
                 <div>
@@ -555,7 +555,7 @@ const Suppliers = () => {
                   <select
                     value={formData.active ? 'true' : 'false'}
                     onChange={(e) => setFormData({ ...formData, active: e.target.value === 'true' })}
-                    className="w-full text-xs p-2.5 bg-[#F7F5F0] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
+                    className="w-full text-xs p-2.5 bg-[#F8F9FA] border border-[#E2E5E9] rounded-lg focus:ring-2 focus:ring-[#2563A6] focus:bg-white text-[#263238] transition"
                   >
                     <option value="true">Active</option>
                     <option value="false">Inactive</option>
@@ -567,7 +567,7 @@ const Suppliers = () => {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:text-[#263238] hover:bg-[#F7F5F0] rounded-lg transition cursor-pointer"
+                  className="px-4 py-2 text-xs font-semibold text-[#667085] hover:text-[#263238] hover:bg-[#F8F9FA] rounded-lg transition cursor-pointer"
                 >
                   Cancel
                 </button>
