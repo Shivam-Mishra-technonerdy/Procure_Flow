@@ -176,13 +176,13 @@ const AssignedOrders = () => {
             <table className="w-full text-left text-xs">
               <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
                 <tr>
-                  <th className="px-4 py-3.5">Order #</th>
-                  <th className="px-4 py-3.5">Buyer</th>
-                  <th className="px-4 py-3.5">Order Date</th>
-                  <th className="px-4 py-3.5">Expected Delivery</th>
-                  <th className="px-4 py-3.5">Status</th>
-                  <th className="px-4 py-3.5 text-right">Amount</th>
-                  <th className="px-4 py-3.5 text-center">Fulfillment Action</th>
+                  <th className="px-5 py-3.5">Order #</th>
+                  <th className="px-5 py-3.5">Buyer</th>
+                  <th className="px-5 py-3.5">Order Date</th>
+                  <th className="px-5 py-3.5">Expected Delivery</th>
+                  <th className="px-5 py-3.5">Status</th>
+                  <th className="px-5 py-3.5 text-right">Amount</th>
+                  <th className="px-5 py-3.5 text-center">Fulfillment Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E2E5E9] text-[#263238]">
@@ -191,24 +191,24 @@ const AssignedOrders = () => {
                     order.buyer?.fullName || order.buyerName || order.createdBy?.fullName || 'Buyer';
 
                   return (
-                    <tr key={order.id} className="hover:bg-[#F7F5F0]/60 transition-colors">
-                      <td className="px-4 py-3 font-semibold text-[#263238]">
+                    <tr key={order.id} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                      <td className="px-5 py-3.5 font-semibold text-[#263238]">
                         {order.orderNumber || `PO #${order.id}`}
                       </td>
-                      <td className="px-4 py-3 font-medium text-[#263238]">{buyerName}</td>
-                      <td className="px-4 py-3 text-[#667085]">
+                      <td className="px-5 py-3.5 font-medium text-[#263238]">{buyerName}</td>
+                      <td className="px-5 py-3.5 text-[#667085] whitespace-nowrap">
                         {formatDate(order.orderDate || order.createdAt)}
                       </td>
-                      <td className="px-4 py-3 text-[#667085]">
+                      <td className="px-5 py-3.5 text-[#667085] whitespace-nowrap">
                         {formatDate(order.expectedDeliveryDate || order.deliveryDate)}
                       </td>
-                      <td className="px-4 py-3">
+                      <td className="px-5 py-3.5 whitespace-nowrap">
                         <StatusBadge status={order.status} />
                       </td>
-                      <td className="px-4 py-3 text-right font-bold text-[#263238]">
+                      <td className="px-5 py-3.5 text-right font-bold text-[#263238] whitespace-nowrap">
                         {formatCurrency(order.totalAmount, order.currencyCode)}
                       </td>
-                      <td className="px-4 py-3 text-center">
+                      <td className="px-5 py-3.5 text-center">
                         <div className="flex items-center justify-center space-x-1.5">
                           <button
                             onClick={() => setSelectedOrder(order)}

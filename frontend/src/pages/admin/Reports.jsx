@@ -288,16 +288,16 @@ const Reports = () => {
           <table className="w-full text-left text-xs">
             <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
               <tr>
-                <th className="px-4 py-3">Supplier / Vendor</th>
-                <th className="px-4 py-3 text-right">Orders Handled</th>
-                <th className="px-4 py-3 text-right">Gross Total ($)</th>
-                <th className="px-4 py-3 text-right">% of Total Spend</th>
+                <th className="px-5 py-3.5">Supplier / Vendor</th>
+                <th className="px-5 py-3.5 text-right">Orders Handled</th>
+                <th className="px-5 py-3.5 text-right">Gross Total ($)</th>
+                <th className="px-5 py-3.5 text-right">% of Total Spend</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E2E5E9] text-[#263238]">
               {supplierPerformance.length === 0 ? (
                 <tr>
-                  <td colSpan="4" className="px-4 py-6 text-center text-[#667085]">
+                  <td colSpan="4" className="px-5 py-8 text-center text-[#667085]">
                     No supplier volume records available.
                   </td>
                 </tr>
@@ -305,13 +305,13 @@ const Reports = () => {
                 supplierPerformance.map((item, idx) => {
                   const pct = stats?.totalSpend ? ((item.total / stats.totalSpend) * 100).toFixed(1) : 0;
                   return (
-                    <tr key={idx} className="hover:bg-[#F7F5F0]/60 transition-colors">
-                      <td className="px-4 py-3 font-semibold text-[#263238]">{item.name}</td>
-                      <td className="px-4 py-3 text-right font-medium text-[#667085]">{item.count} orders</td>
-                      <td className="px-4 py-3 text-right font-bold text-[#263238]">
+                    <tr key={idx} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                      <td className="px-5 py-3.5 font-semibold text-[#263238]">{item.name}</td>
+                      <td className="px-5 py-3.5 text-right font-medium text-[#667085]">{item.count} orders</td>
+                      <td className="px-5 py-3.5 text-right font-bold text-[#263238]">
                         {formatCurrency(item.total)}
                       </td>
-                      <td className="px-4 py-3 text-right font-semibold text-[#2563A6]">{pct}%</td>
+                      <td className="px-5 py-3.5 text-right font-semibold text-[#2563A6]">{pct}%</td>
                     </tr>
                   );
                 })

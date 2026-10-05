@@ -148,43 +148,43 @@ const SupplierDashboard = () => {
           <table className="w-full text-left text-xs">
             <thead className="bg-[#F7F5F0] text-[#667085] font-semibold border-b border-[#E2E5E9] uppercase tracking-wider text-[11px]">
               <tr>
-                <th className="px-4 py-3">Order #</th>
-                <th className="px-4 py-3">Buyer Company</th>
-                <th className="px-4 py-3">Order Date</th>
-                <th className="px-4 py-3">Status</th>
-                <th className="px-4 py-3 text-right">Order Value</th>
-                <th className="px-4 py-3 text-center">Action</th>
+                <th className="px-5 py-3.5">Order #</th>
+                <th className="px-5 py-3.5">Buyer</th>
+                <th className="px-5 py-3.5">Order Date</th>
+                <th className="px-5 py-3.5">Status</th>
+                <th className="px-5 py-3.5 text-right">Order Value</th>
+                <th className="px-5 py-3.5 text-center">Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E2E5E9] text-[#263238]">
               {recentOrders.length === 0 ? (
                 <tr>
-                  <td colSpan="6" className="px-4 py-6 text-center text-[#667085]">
+                  <td colSpan="6" className="px-5 py-8 text-center text-[#667085]">
                     No purchase orders currently assigned.
                   </td>
                 </tr>
               ) : (
                 recentOrders.map((order) => (
-                  <tr key={order.id} className="hover:bg-[#F7F5F0]/60 transition-colors">
-                    <td className="px-4 py-3 font-semibold text-[#263238]">
+                  <tr key={order.id} className="hover:bg-[#F7F5F0]/70 transition-colors duration-150">
+                    <td className="px-5 py-3.5 font-semibold text-[#263238]">
                       {order.orderNumber || `PO #${order.id}`}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-3.5 font-medium text-[#263238]">
                       {order.buyer?.fullName || order.buyerName || order.createdBy?.fullName || 'Procurement Buyer'}
                     </td>
-                    <td className="px-4 py-3 text-[#667085]">
+                    <td className="px-5 py-3.5 text-[#667085] whitespace-nowrap">
                       {formatDate(order.orderDate || order.createdAt)}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-3.5 whitespace-nowrap">
                       <StatusBadge status={order.status} />
                     </td>
-                    <td className="px-4 py-3 text-right font-bold text-[#263238]">
+                    <td className="px-5 py-3.5 text-right font-bold text-[#263238] whitespace-nowrap">
                       {formatCurrency(order.totalAmount, order.currencyCode)}
                     </td>
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-5 py-3.5 text-center">
                       <button
                         onClick={() => setSelectedOrder(order)}
-                        className="px-2.5 py-1 text-[11px] font-semibold text-[#2563A6] hover:bg-[#EAF2FA] rounded-md transition cursor-pointer"
+                        className="px-3 py-1 text-xs font-semibold text-[#2563A6] hover:bg-[#EAF2FA] rounded-md transition cursor-pointer"
                       >
                         Inspect
                       </button>
